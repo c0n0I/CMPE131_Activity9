@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Welcome, {{ username }}!</h1>
+    <p>Bookings:</p>
+    <ul>
+        {% for b in bookings %}
+        <li>{{ b.title }} - ${{ b.price }} per night</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('home') }}">Logout</a>
+</body>
+</html>
