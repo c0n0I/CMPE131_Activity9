@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Listings</title>
+</head>
+<body>
+    <h1>Available Listings</h1>
+    <ul>
+        {% for l in listings %}
+        <li>
+            <strong>{{ l.title }}</strong> — ${{ l.price }} per night
+            <a href="{{ url_for('detail', id=l.id) }}">View Details</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('home') }}">Back to Home</a>
+</body>
+</html>
