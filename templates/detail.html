@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ listing.title }}</title>
+</head>
+<body>
+    <h1>{{ listing.title }}</h1>
+    <p>{{ listing.desc }}</p>
+    <p><strong>Price:</strong> ${{ listing.price }} per night</p>
+    <a href="{{ url_for('show_listings') }}">Back to Listings</a>
+</body>
+</html>
